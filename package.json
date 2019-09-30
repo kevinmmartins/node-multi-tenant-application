@@ -1,0 +1,47 @@
+{
+  "name": "multi-tenant-application",
+  "version": "1.0.0",
+  "description": "multi tenant application example with Node",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.1.0",
+    "express": "latest",
+    "husky": "^3.0.7",
+    "knex": "^0.19.4",
+    "pg": "^7.12.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.2",
+    "@babel/core": "^7.6.2",
+    "@babel/node": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "eslint": "^6.5.0",
+    "nodemon": "^1.19.3"
+  },
+  "scripts": {
+    "start": "nodemon --watch src --exec babel-node src",
+    "pretest": "./node_modules/.bin/eslint --ignore-path .gitignore . --fix"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run pretest"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevinmmartins/node-multi-tenant-apllication.git"
+  },
+  "keywords": [
+    "multi",
+    "tenant",
+    "example",
+    "node"
+  ],
+  "author": "kevinmmartins@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kevinmmartins/node-multi-tenant-apllication/issues"
+  },
+  "homepage": "https://github.com/kevinmmartins/node-multi-tenant-apllication#readme"
+}
