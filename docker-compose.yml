@@ -8,3 +8,46 @@ services:
     command: bash -c "npm install && npm start"
     ports:
       - "3002:8080"
+    depends_on:
+      - common-db
+      - tenant-1-db
+      - tenant-2-db
+    env_file:
+      - .env
+  common-db:
+    container_name: common-db
+    image: postgres
+    environment:
+      POSTGRES_USER: common_db
+      POSTGRES_PASSWORD: common_db
+      PGDATA: /data/postgres
+    volumes:
+      - ./data/db/common/:/data/postgres
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+  tenant-1-db:
+    container_name: tenant-1-db
+    image: postgres
+    environment:
+      POSTGRES_USER: tenant-1-db
+      POSTGRES_PASSWORD: tenant-1-db
+      PGDATA: /data/postgres
+    volumes:
+      - ./data/db/tenant-1:/data/postgres
+    ports:
+      - "5433:5432"
+    restart: unless-stopped
+  tenant-2-db:
+    container_name: tenant-2-db
+    image: postgres
+    environment:
+      POSTGRES_USER: tenant-2-db
+      POSTGRES_PASSWORD: tenant-2-db
+      PGDATA: /data/postgres
+    volumes:
+      - ./data/db/tenant-2:/data/postgres
+    ports:
+      - "5434:5432"
+    restart: unless-stopped
