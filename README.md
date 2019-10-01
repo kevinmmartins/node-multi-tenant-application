@@ -1,2 +1,2 @@
-# node-multi-tenant-apllication
+# node-multi-tenant-application
 Multi-tenant application example
