@@ -11,5 +11,5 @@ CREATE TABLE tenants (
 );
 
 INSERT INTO tenants (slug, db_name, db_host, db_username, db_password, db_port) VALUES
-  ('tenant1', 'tenant-1-db', 'tenant-1-db', 'tenant-1-db', 'tenant-1-db', 5433),
-  ('tenant2', 'tenant-2-db', 'tenant-2-db', 'tenant-2-db', 'tenant-2-db', 5434);
+  ('tenant1', 'tenant_1_db', '192.168.0.202', 'tenant_1_db', 'tenant_1_db', 5433),
+  ('tenant2', 'tenant_2_db', '192.168.0.202', 'tenant_2_db', 'tenant_2_db', 5434);

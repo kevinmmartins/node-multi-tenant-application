@@ -13,7 +13,12 @@ export const  resolve = (req, res, next) => {
         return;
     }
     nameSpace.run(() => {
-        nameSpace.set('connection', getConnectionBySlug(slug));
+        const connection =getConnectionBySlug(slug);
+        if(!connection){
+            res.json({ message: `Tenant not found !` });
+            return;
+        }
+        nameSpace.set('connection', connection);
         next();
     });
 }
