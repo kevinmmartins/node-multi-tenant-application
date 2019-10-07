@@ -15,14 +15,12 @@ services:
     env_file:
       - .env
   common-db:
-    container_name: common-db
+    container_name: common_db
     image: postgres
     environment:
       POSTGRES_USER: common_db
       POSTGRES_PASSWORD: common_db
-      PGDATA: /data/postgres
     volumes:
-      - ./data/db/common/:/data/postgres
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
     ports:
       - "5432:5432"
@@ -33,9 +31,8 @@ services:
     environment:
       POSTGRES_USER: tenant-1-db
       POSTGRES_PASSWORD: tenant-1-db
-      PGDATA: /data/postgres
     volumes:
-      - ./data/db/tenant-1:/data/postgres
+      - ./tenant_1_data.sql:/docker-entrypoint-initdb.d/init.sql
     ports:
       - "5433:5432"
     restart: unless-stopped
@@ -45,9 +42,8 @@ services:
     environment:
       POSTGRES_USER: tenant-2-db
       POSTGRES_PASSWORD: tenant-2-db
-      PGDATA: /data/postgres
     volumes:
-      - ./data/db/tenant-2:/data/postgres
+      - ./tenant_2_data.sql:/docker-entrypoint-initdb.d/init.sql
     ports:
       - "5434:5432"
     restart: unless-stopped

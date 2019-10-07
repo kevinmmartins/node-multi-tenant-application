@@ -13,4 +13,3 @@ CREATE TABLE tenants (
 INSERT INTO tenants (slug, db_name, db_host, db_username, db_password, db_port) VALUES
   ('tenant1', 'tenant-1-db', 'tenant-1-db', 'tenant-1-db', 'tenant-1-db', 5433),
   ('tenant2', 'tenant-2-db', 'tenant-2-db', 'tenant-2-db', 'tenant-2-db', 5434);
-view rawblock4.sql hosted with ❤ by GitHub
