@@ -8,7 +8,7 @@
     "continuation-local-storage": "^3.2.1",
     "dotenv": "^8.2.0",
     "express": "latest",
-    "husky": "^4.2.2",
+    "husky": "^4.2.3",
     "knex": "^0.20.8",
     "pg": "^7.18.1"
   },
