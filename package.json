@@ -9,7 +9,7 @@
     "dotenv": "^8.2.0",
     "express": "latest",
     "husky": "^4.2.3",
-    "knex": "^0.20.10",
+    "knex": "^0.20.11",
     "pg": "^7.18.2"
   },
   "devDependencies": {
