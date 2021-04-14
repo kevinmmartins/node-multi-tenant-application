@@ -10,7 +10,7 @@
     "express": "latest",
     "husky": "^6.0.0",
     "knex": "^0.95.3",
-    "pg": "^8.5.1"
+    "pg": "^8.6.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.13.10",
