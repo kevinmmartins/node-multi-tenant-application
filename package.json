@@ -13,7 +13,7 @@
     "pg": "^8.6.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.13.14",
+    "@babel/cli": "^7.14.3",
     "@babel/core": "^7.13.14",
     "@babel/node": "^7.14.2",
     "@babel/preset-env": "^7.14.4",
