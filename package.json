@@ -18,7 +18,7 @@
     "@babel/node": "^7.19.1",
     "@babel/preset-env": "^7.19.0",
     "eslint": "^8.23.1",
-    "nodemon": "^2.0.19"
+    "nodemon": "^2.0.20"
   },
   "scripts": {
     "start": "nodemon --watch src --exec babel-node src",
