@@ -6,7 +6,7 @@
   "dependencies": {
     "body-parser": "^1.20.2",
     "continuation-local-storage": "^3.2.1",
-    "dotenv": "^16.1.3",
+    "dotenv": "^16.1.4",
     "express": "latest",
     "husky": "^8.0.3",
     "knex": "^2.4.2",
