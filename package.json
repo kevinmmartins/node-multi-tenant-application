@@ -17,7 +17,7 @@
     "@babel/core": "^7.23.3",
     "@babel/node": "^7.22.19",
     "@babel/preset-env": "^7.23.5",
-    "eslint": "^8.53.0",
+    "eslint": "^8.56.0",
     "nodemon": "^3.0.2"
   },
   "scripts": {
