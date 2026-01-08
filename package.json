@@ -4,7 +4,7 @@
   "description": "multi tenant application example with Node",
   "main": "index.js",
   "dependencies": {
-    "body-parser": "^2.2.0",
+    "body-parser": "^2.2.2",
     "continuation-local-storage": "^3.2.1",
     "dotenv": "^17.2.2",
     "express": "latest",
